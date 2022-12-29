@@ -1,5 +1,6 @@
 import './style.css';
-import flyImage from './images/fly.jpeg'
+import oasisx from './images/oasisx.jpeg'
+import artsDao from './images/artsDao.jpeg'
 import logo from './images/LBF-elemets-03.png'
 import { useState, useMemo } from 'react';
 import Select from 'react-select'
@@ -12,32 +13,34 @@ function App() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [value, setValue] = useState('');
+  const [country, setcountry] = useState('');
+  const [code , setCode] = useState('');
   const [response, setResponse] = useState(' ');
-  console.log(response)
-
-  const options = useMemo(() => countryList().getData(), [])
-  const changeHandler = value => {
-    setValue(value)
+  
+  const countries = useMemo(() => countriesInfo.getAllCountries(), [])
+  
+  const selectCountry = value => {
+    setcountry(value.name)
   }
-  const handleChangeName = (e) => {
+  const selectCode = value => {
+    const plus = `${value.countryCallingCodes[0]}`
+    setCode(plus.replace(/\s+/g, '').slice(1))
+  }
+  const InsertName = (e) => {
     setName(e.target.value);
   }
-  const handleChangeEmail = (e) => {
+  const InsertEmail = (e) => {
     setEmail(e.target.value);
   }
-  const handleChangePhone = (e) => {
+  const InsertPhone = (e) => {
     setPhone(e.target.value);
   }
   const handleSubmit = (e) => {
-    console.log(name)
-    console.log(email)
-    const phoneNumber = `${countriesInfo.getCountryInfoByCode(`${value.value}`).countryCallingCodes[0].slice(1)}` + `${phone}`
-    console.log(phoneNumber)
     const obj = {
       name,
       email,
-      phoneNumber
+      country,
+      phoneNumber:`${code}` + `${phone}`
     }
     var config = {
       method: 'POST',
@@ -46,23 +49,23 @@ function App() {
       },
       body: JSON.stringify(obj)
     };
-    fetch(`localhost:8000/send-watsApp`, config)
-      .then(function (response) {
-        // The API call was successful!
-        if (response.ok) {
-          return response.json();
-        } else {
-          return Promise.reject(response);
-        }
-      })
-      .then(function (data) {
-        console.log("line#1", data.status)
-        setResponse(data.status)
+    // fetch(`localhost:8000/send-watsApp`, config)
+    //   .then(function (response) {
+    //     // The API call was successful!
+    //     if (response.ok) {
+    //       return response.json();
+    //     } else {
+    //       return Promise.reject(response);
+    //     }
+    //   })
+    //   .then(function (data) {
+    //     console.log("line#1", data.status)
+    //     setResponse(data.status)
 
-      }).catch(function (err) {
-        // There was an error
-        console.log('Something went wrong.', err);
-      });
+    //   }).catch(function (err) {
+    //     // There was an error
+    //     console.log('Something went wrong.', err);
+    //   });
     e.preventDefault();
 
   }
@@ -70,7 +73,8 @@ function App() {
     <>
       <center>
         <div>
-          <img src={flyImage} alt="" width={200} height={200} />
+          <img src={oasisx} alt="" width={250} height={250} />
+          <img src={artsDao} alt="" width={300} height={300} />
         </div>
       </center>
       {/* CONTACT */}
@@ -79,10 +83,10 @@ function App() {
           <div className="row">
             <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
               <div className="section-title">
-                <h1 className="display-4 text-black fw-semibold"> </h1>
-                <div className="line bg-white" />
-                <p className="text-black">Simply enter your details below to receive your exclusive minting link and claim your raffle entry.</p>
-                <p className="text-black" style={{ color: 'red' }}>971 entries will only be available.</p>
+                <h1 className="display-4 text-black fw-semibold">Non Fungible Meetup vol1</h1>
+                {/* <div className="line bg-white" /> */}
+                <p className="text-black">Location: &ensp; Beirut Digital District</p>
+                <p className="text-black" style={{ color: 'red' }}>Date: &ensp;7/1/2023  from &ensp;11AM to 4PM</p>
               </div>
             </div>
           </div>
@@ -90,19 +94,23 @@ function App() {
             <div className="col-lg-8">
               <form onSubmit={(e) => { handleSubmit(e) }} className="row g-3 p-lg-5 p-4 bg-white theme-shadow">
                 <div className="form-group col-lg-12">
-                  <input id="name" type="text" value={name} required className="form-control" placeholder="Name" onChange={(e) => { handleChangeName(e) }} />
+                  <input id="name" type="text" value={name} required className="form-control" placeholder="Name" onChange={(e) => { InsertName(e) }} />
                 </div>
                 <div className="form-group col-lg-12">
-                  <input id="email" type="email" value={email} className="form-control" placeholder="Email Address" onChange={(e) => { handleChangeEmail(e) }} />
+                  <input id="email" type="email" value={email} className="form-control" placeholder="Email Address" onChange={(e) => { InsertEmail(e) }} />
                 </div>
-                <div className="form-group col-lg-12 grid-container">
+                <div className="form-group col-lg-12">
+                <Select  options={countries}  onChange={selectCountry} getOptionLabel ={(option)=>option.name} getOptionValue ={(option)=>option.name}  placeholder="SelectCountry"/>
+                </div>
+                <div className="form-group col-lg-12 phone">
                   <div>
-                    <Select options={options} value={value} onChange={changeHandler} class='code' />
+                    <Select  options={countries}  onChange={selectCode}  getOptionLabel ={(option)=>option.countryCallingCodes} getOptionValue ={(option)=>option.countryCallingCodes} placeholder="Code"/>
                   </div>
                   <div>
-                    <input id="phoneNumber" type="text" value={phone} className="form-control" placeholder="Phone Number" onChange={(e) => { handleChangePhone(e) }} />
+                    <input id="phoneNumber" type="text" value={phone} className="form-control number" placeholder="Phone Number" onChange={(e) => { InsertPhone(e) }} />
                   </div>
                 </div>
+           
                 <div className="form-group col-lg-12 d-grid ">
                   <input className="btn btn-brand submit" type="submit" value="Submit" />
                 </div>
