@@ -38,7 +38,7 @@ function App() {
       name,
       email,
       country,
-      phoneNumber:`${code}` + `${phone}`
+      phoneNumber:`${code}${phone}`
     }
     // var config = {
     //   method: 'POST',
@@ -64,6 +64,7 @@ function App() {
     //     // There was an error
     //     console.log('Something went wrong.', err);
     //   });
+    console.log(obj)
     e.preventDefault();
 
   }
