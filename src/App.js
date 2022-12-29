@@ -3,8 +3,7 @@ import oasisx from './images/oasisx.jpeg'
 import artsDao from './images/artsDao.jpeg'
 import logo from './images/LBF-elemets-03.png'
 import { useState, useMemo } from 'react';
-import Select from 'react-select'
-import countryList from 'react-select-country-list'
+import Select from 'react-select';
 import countriesInfo from 'countries-information';
 
 
@@ -15,7 +14,6 @@ function App() {
   const [phone, setPhone] = useState('');
   const [country, setcountry] = useState('');
   const [code , setCode] = useState('');
-  const [response, setResponse] = useState(' ');
   
   const countries = useMemo(() => countriesInfo.getAllCountries(), [])
   
@@ -42,13 +40,13 @@ function App() {
       country,
       phoneNumber:`${code}` + `${phone}`
     }
-    var config = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(obj)
-    };
+    // var config = {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(obj)
+    // };
     // fetch(`localhost:8000/send-watsApp`, config)
     //   .then(function (response) {
     //     // The API call was successful!
