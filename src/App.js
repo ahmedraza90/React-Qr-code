@@ -81,15 +81,12 @@ function App() {
                 <center>
                 <img src={artsDao} alt="" width="30%" height="30%" />
                   <img src={oasisx} alt="" width="30%" height="30%" />
-                  
                 </center>
                 </div>
                 <h1 className="display-4 text-black fw-semibold">Non Fungible Meetup vol1</h1>
                 <center>
-                <div className="date">
                 <p className="text-black">Location: &ensp; Beirut Digital District</p>
-                <p className="text-black" style={{ color: 'red' }}>Date: &ensp;7/1/2023  from &ensp;11AM to 4PM</p>
-                </div>
+                <p className="text-black date" style={{ color: 'red' }}>Date: &ensp;7/1/2023  from &ensp;11AM to 4PM</p>
                 </center>
               </div>
             </div>

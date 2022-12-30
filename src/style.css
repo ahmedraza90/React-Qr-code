@@ -23,11 +23,11 @@ body {
 }
 
 .date {
-    display : flex;
+    /* display : flex; */
     /* border: 1px solid black; */
-    width:50%;
-    height: 30px;
-    /* margin-bottom:  -50px; */
+    /* /* width:50%;/ */
+    /* height: 50px;  */
+    margin-top:  -20px;
 }
 /* html {
     overflow-y: hidden;
