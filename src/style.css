@@ -23,11 +23,11 @@ body {
 }
 
 .logos {
-    margin-bottom:  -20px;
+    margin-bottom:  -10px;
 }
-html {
+/* html {
     overflow-y: hidden;
-}
+} */
 
 
 h1,
@@ -390,8 +390,4 @@ footer .line {
 .number {
     /* border: 1px solid black; */
     height: 42px;
-}
-
-.formSection {
-    margin-top: -1px;
 }
