@@ -85,9 +85,12 @@ function App() {
                 </center>
                 </div>
                 <h1 className="display-4 text-black fw-semibold">Non Fungible Meetup vol1</h1>
-                {/* <div className="line bg-white" /> */}
+                <center>
+                <div className="date">
                 <p className="text-black">Location: &ensp; Beirut Digital District</p>
                 <p className="text-black" style={{ color: 'red' }}>Date: &ensp;7/1/2023  from &ensp;11AM to 4PM</p>
+                </div>
+                </center>
               </div>
             </div>
           </div>
