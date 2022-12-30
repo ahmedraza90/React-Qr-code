@@ -1,6 +1,6 @@
 import './style.css';
-import oasisx from './images/oasisx.jpeg'
-import artsDao from './images/artsDao.jpeg'
+import oasisx from './images/oasisx.png'
+import artsDao from './images/artsDao.png'
 import logo from './images/LBF-elemets-03.png'
 import { useState, useMemo } from 'react';
 import Select from 'react-select';
@@ -13,10 +13,10 @@ function App() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [country, setcountry] = useState('');
-  const [code , setCode] = useState('');
-  
+  const [code, setCode] = useState('');
+
   const countries = useMemo(() => countriesInfo.getAllCountries(), [])
-  
+
   const selectCountry = value => {
     setcountry(value.name)
   }
@@ -38,7 +38,7 @@ function App() {
       name,
       email,
       country,
-      phoneNumber:`${code}${phone}`
+      phoneNumber: `${code}${phone}`
     }
     // var config = {
     //   method: 'POST',
@@ -69,19 +69,21 @@ function App() {
 
   }
   return (
-    <>
-      <center>
-        <div>
-          <img src={oasisx} alt="" width={250} height={250} />
-          <img src={artsDao} alt="" width={300} height={300} />
-        </div>
-      </center>
+    <div>
+
       {/* CONTACT */}
-      <section id="form" className="section-padding">
+      <section id="form " className="section-padding">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
               <div className="section-title">
+                <div className='logos'>
+                <center>
+                <img src={artsDao} alt="" width={200} height={200} />
+                  <img src={oasisx} alt="" width={200} height={200} />
+                  
+                </center>
+                </div>
                 <h1 className="display-4 text-black fw-semibold">Non Fungible Meetup vol1</h1>
                 {/* <div className="line bg-white" /> */}
                 <p className="text-black">Location: &ensp; Beirut Digital District</p>
@@ -99,17 +101,17 @@ function App() {
                   <input id="email" type="email" value={email} className="form-control" placeholder="Email Address" onChange={(e) => { InsertEmail(e) }} />
                 </div>
                 <div className="form-group col-lg-12">
-                <Select  options={countries}  onChange={selectCountry} getOptionLabel ={(option)=>option.name} getOptionValue ={(option)=>option.name}  placeholder="SelectCountry"/>
+                  <Select options={countries} onChange={selectCountry} getOptionLabel={(option) => option.name} getOptionValue={(option) => option.name} placeholder="SelectCountry" />
                 </div>
                 <div className="form-group col-lg-12 phone">
                   <div>
-                    <Select  options={countries}  onChange={selectCode}  getOptionLabel ={(option)=>option.countryCallingCodes} getOptionValue ={(option)=>option.countryCallingCodes} placeholder="Code"/>
+                    <Select options={countries} onChange={selectCode} getOptionLabel={(option) => option.countryCallingCodes} getOptionValue={(option) => option.countryCallingCodes} placeholder="Code" />
                   </div>
                   <div>
                     <input id="phoneNumber" type="text" value={phone} className="form-control number" placeholder="Phone Number" onChange={(e) => { InsertPhone(e) }} />
                   </div>
                 </div>
-           
+
                 <div className="form-group col-lg-12 d-grid ">
                   <input className="btn btn-brand submit" type="submit" value="Submit" />
                 </div>
@@ -125,20 +127,10 @@ function App() {
           </div>
         </center>
       </section>
-      <section id="submitted" className="sec2">
-        <h1>Your form has been Sumbitted</h1>
-      </section>
-      <center>
-        <section id="Exist" className="sec3">
-          <h1>You have already registered</h1>
-        </section>
-      </center>
-      <footer>
-      </footer>
       {/* https://www.youtube.com/watch?v=Fa1uybpY2Fo */}
       {/* https://github.com/SA7MAN/Elixir */}
 
-    </>
+    </div>
   );
 }
 

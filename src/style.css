@@ -18,7 +18,17 @@ body {
     font-family: var(--font-base);
     line-height: 1.7;
     color: var(--c-body);
+    
+    /* background-blend-mode: difference; */
 }
+
+.logos {
+    margin-bottom:  -20px;
+}
+html {
+    overflow-y: hidden;
+}
+
 
 h1,
 h2,
@@ -367,7 +377,7 @@ footer .line {
 }
 
 .submit {
-    background: rgb(56,93,166);
+    background: rgb(56, 93, 166);
     /* background: linear-gradient(0deg, rgba(56, 93, 166, 1) 0%, rgba(191, 111, 132, 1) 100%); */
 }
 
@@ -380,4 +390,8 @@ footer .line {
 .number {
     /* border: 1px solid black; */
     height: 42px;
+}
+
+.formSection {
+    margin-top: -1px;
 }
