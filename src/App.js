@@ -79,8 +79,8 @@ function App() {
               <div className="section-title">
                 <div className='logos'>
                 <center>
-                <img src={artsDao} alt="" width={200} height={200} />
-                  <img src={oasisx} alt="" width={200} height={200} />
+                <img src={artsDao} alt="" width="25%" height="25%" />
+                  <img src={oasisx} alt="" width="22%" height="22%" />
                   
                 </center>
                 </div>
