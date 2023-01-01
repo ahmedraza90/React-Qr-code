@@ -1,7 +1,7 @@
 import './style.css';
 // import oasisx from './images/oasisx.png'
 import artsDao from './images/artsDao.png'
-import oasisxLogo from './images/oasisx-logo-beta.png'
+import oasisxLogo from './images/Copy of OasisX-logo-03.png'
 import logo from './images/LBF-elemets-03.png'
 import { useState } from 'react';
 
@@ -91,19 +91,17 @@ function App() {
             :
             <div>
               <div className='row'>
-                <div className='logos'>
                   <center>
-                    <img src={artsDao} alt="" width="20%" height="20%" />
                     <img src={oasisxLogo} alt="" width="20%" height="20%" />
+                    <img src={artsDao} alt="" width="20%" height="20%" />
                   </center>
-                </div>
               </div>
               <div className="row">
                 <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                   <div className="section-title">
                     <h1 className="display-4 text-black fw-semibold">Non Fungible Meetup vol1</h1>
                     <center>
-                      <p className="text-black">Location: &ensp; Beirut Digital District</p>
+                      <p className="text-black">Location: &ensp; Beirut Digital District, Lebanon </p>
                       <p className="text-black date" style={{ color: 'red' }}>Date: &ensp;7/1/2023  from &ensp;11AM to 4PM</p>
                     </center>
                   </div>
