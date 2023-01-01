@@ -90,7 +90,7 @@ function App() {
             </center>
             :
             <div>
-              <div className='row'>
+              <div className='row logos'>
                   <center>
                     <img src={oasisxLogo} alt="" width="20%" height="20%" />
                     <img src={artsDao} alt="" width="20%" height="20%" />
