@@ -92,8 +92,8 @@ function App() {
             <div>
               <div className='row logos'>
                   <center>
-                    <img src={oasisxLogo} alt="" width="30%" height="30%" />
-                    <img src={artsDao} alt="" width="30%" height="30%" />
+                    <img src={oasisxLogo} alt="" width="40%" height="40%" />
+                    <img src={artsDao} alt="" width="40%" height="40%" />
                   </center>
               </div>
               <div className="row">
