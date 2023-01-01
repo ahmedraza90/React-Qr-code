@@ -153,7 +153,7 @@ function App() {
         </div>
         <center>
           <div className="logo">
-            <img src={logo} alt="" width={250} height={250} />
+            <img src={logo} alt="" width={215} height={215} />
           </div>
         </center>
       </section>
