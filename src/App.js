@@ -2,8 +2,8 @@ import './style.css';
 import oasisx from './images/oasisx.png'
 import artsDao from './images/artsDao.png'
 import logo from './images/LBF-elemets-03.png'
-import { useState, useMemo } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
+
 // import Select from 'react-select';
 // import countriesInfo from 'countries-information';
 
@@ -80,7 +80,7 @@ function App() {
       {/* CONTACT */}
       <section id="form " className="section-padding">
         <div className="container">
-          {response == "Success"
+          {response === "Success"
             ?
             <center>
               <div className="row sec2" data-aos="fade-down" data-aos-delay="250">
@@ -140,7 +140,7 @@ function App() {
             </div>
           }
 
-          {response == "Fail"
+          {response === "Fail"
             ?
             <center>
               <div className="row justify-content-center">
