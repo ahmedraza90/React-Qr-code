@@ -1,6 +1,7 @@
 import './style.css';
-import oasisx from './images/oasisx.png'
+// import oasisx from './images/oasisx.png'
 import artsDao from './images/artsDao.png'
+import oasisxLogo from './images/oasisx-logo-beta.png'
 import logo from './images/LBF-elemets-03.png'
 import { useState } from 'react';
 
@@ -92,8 +93,8 @@ function App() {
               <div className='row'>
                 <div className='logos'>
                   <center>
-                    <img src={artsDao} alt="" width="30%" height="30%" />
-                    <img src={oasisx} alt="" width="30%" height="30%" />
+                    <img src={artsDao} alt="" width="20%" height="20%" />
+                    <img src={oasisxLogo} alt="" width="20%" height="20%" />
                   </center>
                 </div>
               </div>
