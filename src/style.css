@@ -145,6 +145,7 @@ img {
 
 /* SECTION TITLE */
 .section-title {
+    margin-top: -50px;
     margin-bottom: 50px;
 }
 
@@ -389,6 +390,9 @@ footer .line {
 .submit {
     background: rgb(56, 93, 166);
     /* background: linear-gradient(0deg, rgba(56, 93, 166, 1) 0%, rgba(191, 111, 132, 1) 100%); */
+}
+.title {
+    color: rgb(56, 93, 166);
 }
 
 .phone {

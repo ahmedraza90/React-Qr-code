@@ -91,18 +91,19 @@ function App() {
             :
             <div>
               <div className='row logos'>
-                  <center>
-                    <img src={oasisxLogo} alt="" width="31%" height="31%" />
-                    <img src={artsDao} alt="" width="35%" height="35%" />
-                  </center>
+                <center>
+                  <img src={oasisxLogo} alt="" width="31%" height="31%" />
+                  <img src={artsDao} alt="" width="35%" height="35%" />
+                </center>
               </div>
               <div className="row">
                 <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                   <div className="section-title">
-                    <h1 className="display-4 text-black fw-semibold">Non Fungible Meetup vol1</h1>
+                    <h1 className="display-4 fw-semibold title">Non Fungible Meetup vol1</h1>
                     <center>
                       <p className="text-black">Location: &ensp; Beirut Digital District, Lebanon </p>
                       <p className="text-black date" style={{ color: 'red' }}>Date: &ensp;7/1/2023  from &ensp;11AM to 4PM</p>
+                      <p className="text-black date" style={{ color: 'red' }}>Limited to 100 tickets, entrance is free</p>
                     </center>
                   </div>
                 </div>
