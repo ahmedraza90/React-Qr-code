@@ -89,6 +89,14 @@ function App() {
               </div>
             </center>
             :
+            response === "sold out"
+            ?
+            <center>
+              <div className="row sec2" data-aos="fade-down" data-aos-delay="250">
+                <h1 className="display-4 text-black fw-semibold">The event has sold out, a limited number of tickets will be available at the door.</h1>
+              </div>
+            </center>
+            :
             <div>
               <div className='row logos'>
                 <center>
