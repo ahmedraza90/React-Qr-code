@@ -85,7 +85,7 @@ function App() {
             ?
             <center>
               <div className="row sec2" data-aos="fade-down" data-aos-delay="250">
-                <h1 className="display-4 text-black fw-semibold">Submitted! You will receive instructions by email shortly.</h1>
+                <h1 className="display-4 text-black fw-semibold"> Thank you for registering, please check your email for instructions to claim your ticket</h1>
               </div>
             </center>
             :
@@ -107,11 +107,11 @@ function App() {
               <div className="row">
                 <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                   <div className="section-title">
-                    <h1 className="display-4 fw-semibold title">Non Fungible Meetup vol1</h1>
+                    <h1 className="display-4 fw-semibold title">Non Fungible Meetup vol2</h1>
                     <center>
-                      <p className="text-black">Location: &ensp; Beirut Digital District, Lebanon </p>
-                      <p className="text-black date" style={{ color: 'red' }}>Date: &ensp;7/1/2023  from &ensp;11AM to 4PM</p>
-                      <p className="text-black date" style={{ color: 'red' }}>Limited to 100 tickets, entrance is free</p>
+                      <p className="text-black">Location <strong>:</strong> &ensp; Living Room, Mar Mikhael </p>
+                      <p className="text-black date" style={{ color: 'red' }}>Date <strong>:</strong> &ensp;11/2/2023 from &ensp;1PM till 5PM</p>
+                      <p className="text-black date" style={{ color: 'red' }}>Limited to 40, tickets entrance is free, pay for what you order</p>
                     </center>
                   </div>
                 </div>
