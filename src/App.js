@@ -52,7 +52,7 @@ function App() {
       body: JSON.stringify(obj)
     };
     e.preventDefault();
-    fetch(`https://qr-code-api.oasisx.world/send-email`, config)
+    fetch(`https://qr-code-api.oasisx.world/meetup2-send-email`, config)
       .then(function (response) {
         // The API call was successful!
         if (response.ok) {
